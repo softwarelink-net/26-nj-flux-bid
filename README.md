@@ -3,7 +3,7 @@
 > 部署域名 (Host): [https://26-nj-flux-bid.softwarelink.net/](https://26-nj-flux-bid.softwarelink.net/)  
 > 项目仓库 (Repo): [https://github.com/softwarelink-net/26-nj-flux-bid](https://github.com/softwarelink-net/26-nj-flux-bid)
 
-![控制台预览](docs/assets/dashboard-preview.png)
+![控制台预览](docs/assets/dashboard-console.png)
 
 ---
 
@@ -60,7 +60,7 @@ npm run upload:r2
 26-nj-flux-bid/
 ├── docs/
 │   └── assets/
-│       └── dashboard-preview.png
+│       └── dashboard-console.png
 ├── src/
 │   ├── assets/
 │   ├── components/
