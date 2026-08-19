@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #app {
+    min-height: 100%;
+  }
+
+  body {
+    padding-top: 40px;
+    background:
+      radial-gradient(ellipse at top left, rgba(6, 78, 59, 0.12) 0%, transparent 46%),
+      radial-gradient(ellipse at top right, rgba(8, 145, 178, 0.1) 0%, transparent 42%),
+      linear-gradient(180deg, #ecfdf5 0%, #f8fafc 48%, #f1f5f9 100%);
+    font-family: 'PingFang SC', 'Microsoft YaHei', 'Segoe UI', system-ui, sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #6ee7b7;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-lg border border-emerald-100 bg-white/90 shadow-sm backdrop-blur-sm;
+  }
+  .panel-header {
+    @apply border-b border-emerald-100 px-4 py-3 text-sm font-semibold tracking-wide text-slate-800;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-flux-800 px-4 py-2 text-sm font-medium text-emerald-50 transition hover:bg-flux-700 focus:outline-none focus:ring-2 focus:ring-flux-400/40 disabled:opacity-50;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-emerald-200 bg-white px-3 py-2 text-sm text-slate-700 transition hover:bg-emerald-50;
+  }
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-red-700 px-3 py-1.5 text-xs font-medium text-white hover:bg-red-600 disabled:opacity-50;
+  }
+  .stat-value {
+    @apply font-mono text-2xl font-semibold tabular-nums text-flux-800;
+  }
+  .label-muted {
+    @apply text-xs uppercase tracking-wider text-slate-500;
+  }
+  .input-light {
+    @apply mt-1 w-full rounded-md border-emerald-200 bg-white text-sm text-slate-800 focus:border-flux-500 focus:ring-flux-500;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 28s linear infinite;
+}
